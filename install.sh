@@ -14,9 +14,18 @@ ORANGE='\e[1;93m'
 NC='\e[0m'
 
 if [[ $EUID -ne 0 ]]; then
-  echo -e "$This script must run as root"
-  exit 1
+   echo -e "${RED}This script must be run as root"
+   exit 1
 fi
 
-  COLOR_NUM=$((RANDOM % 7))
-
+COLOR_NUM=$((RANDOM % 7))
+# Assign a color variable based on the random number
+case $COLOR_NUM in
+    0) COLOR=$RED;;
+    1) COLOR=$GREEN;;
+    2) COLOR=$YELLOW;;
+    3) COLOR=$BLUE;;
+    4) COLOR=$CYAN;;
+    5) COLOR=$ORANGE;;
+    *) COLOR=$WHITE;;
+esac
