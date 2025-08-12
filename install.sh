@@ -29,3 +29,30 @@ case $COLOR_NUM in
     5) COLOR=$ORANGE;;
     *) COLOR=$WHITE;;
 esac
+
+
+echo -e "${COLOR}"
+echo ""
+echo "   ▄█    █▄       ▄████████  ▄████████    ▄█   ▄█▄  ▄█  ███▄▄▄▄      ▄██████▄           ███      ▄██████▄   ▄██████▄   ▄█       ";
+echo "  ███    ███     ███    ███ ███    ███   ███ ▄███▀ ███  ███▀▀▀██▄   ███    ███      ▀█████████▄ ███    ███ ███    ███ ███       ";
+echo "  ███    ███     ███    ███ ███    █▀    ███▐██▀   ███▌ ███   ███   ███    █▀          ▀███▀▀██ ███    ███ ███    ███ ███       ";
+echo " ▄███▄▄▄▄███▄▄   ███    ███ ███         ▄█████▀    ███▌ ███   ███  ▄███                 ███   ▀ ███    ███ ███    ███ ███       ";
+echo "▀▀███▀▀▀▀███▀  ▀███████████ ███        ▀▀█████▄    ███▌ ███   ███ ▀▀███ ████▄           ███     ███    ███ ███    ███ ███       ";
+echo "  ███    ███     ███    ███ ███    █▄    ███▐██▄   ███  ███   ███   ███    ███          ███     ███    ███ ███    ███ ███       ";
+echo "  ███    ███     ███    ███ ███    ███   ███ ▀███▄ ███  ███   ███   ███    ███          ███     ███    ███ ███    ███ ███▌    ▄ ";
+echo "  ███    █▀      ███    █▀  ████████▀    ███   ▀█▀ █▀    ▀█   █▀    ████████▀          ▄████▀    ▀██████▀   ▀██████▀  █████▄▄██ ";
+echo "                                         ▀                                                                            ▀         ";
+
+echo -e "${BLUE}                                    https://github.com/Z4nzu/hackingtool ${NC}"
+echo -e "${RED}                                     [!] This Tool Must Run As ROOT [!]${NC}\n"
+echo -e "${CYAN}              Select Best Option : \n"
+echo -e "${WHITE}              [1] Kali Linux / Parrot-Os (apt)"
+echo -e "${WHITE}              [2] Arch Linux (pacman)" # added arch linux support because of feature request #231
+echo -e "${WHITE}              [0] Exit "
+
+echo -e "${COLOR}┌──($USER㉿$HOST)-[$(pwd)]"
+choice=$1
+if [[ ! $choice =~ ^[1-2]+$ ]]; then
+    read -p "└─$>>" choice
+fi
+
